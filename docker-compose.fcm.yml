@@ -1,0 +1,8 @@
+services:
+  notification-service:
+    environment:
+      FCM_ENABLED: "true"
+      FIREBASE_PROJECT_ID: ${FIREBASE_PROJECT_ID:?FIREBASE_PROJECT_ID must be configured}
+      GOOGLE_APPLICATION_CREDENTIALS: /run/secrets/firebase-admin.json
+    volumes:
+      - ${FIREBASE_CREDENTIALS_HOST_PATH:?FIREBASE_CREDENTIALS_HOST_PATH must point to the Firebase service-account file}:/run/secrets/firebase-admin.json:ro

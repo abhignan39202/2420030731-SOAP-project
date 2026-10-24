@@ -1,0 +1,8 @@
+**/target
+**/.env*
+.git
+**/*.pem
+**/firebase-admin*.json
+**/firebase-service-account*.json
+**/serviceAccountKey*.json
+**/*firebase*credentials*.json
